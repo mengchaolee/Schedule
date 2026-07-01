@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高雄一日遊行程</title>
+<style>
+  :root {
+    --bg: #fff0f6;
+    --card: #ffffff;
+    --border: #ffd6e8;
+    --text-primary: #4a3b4a;
+    --text-secondary: #9b7d95;
+    --accent: #ff6f9c;
+    --accent-light: #ffe3ee;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 8% 12%, #ffe0ec 0%, transparent 40%),
+      radial-gradient(circle at 92% 20%, #e0f4ff 0%, transparent 40%),
+      radial-gradient(circle at 15% 85%, #fff3d6 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, #e6ffe9 0%, transparent 40%),
+      linear-gradient(135deg, #fff0f6 0%, #f3f0ff 50%, #eaf7ff 100%);
+    background-attachment: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: var(--text-primary);
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "🌸 ⭐ ☁️ 🎀 🍡 ⭐ 🌸 ☁️ 🎀 🍡 ⭐ 🌸 ☁️ 🎀 🍡 ⭐ 🌸 ☁️ 🎀 🍡";
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    font-size: 22px;
+    letter-spacing: 40px;
+    opacity: 0.18;
+    line-height: 90px;
+    height: 100vh;
+    white-space: pre-wrap;
+    word-break: break-all;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+    background: rgba(255,255,255,0.75);
+    border-radius: 20px;
+    padding: 1.2rem;
+    backdrop-filter: blur(4px);
+    border: 2px dashed #ffc2dc;
+  }
+  header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: #ff5c92;
+  }
+  header p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 3px;
+    background: repeating-linear-gradient(180deg, #ffb8d6, #ffb8d6 6px, transparent 6px, transparent 12px);
+    border-radius: 4px;
+  }
+  .item {
+    position: relative;
+    background: rgba(255,255,255,0.88);
+    border: 2px solid var(--border);
+    border-radius: 18px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 0 rgba(255, 182, 213, 0.35);
+  }
+  .item::before {
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .time {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ff5c92;
+    background: var(--accent-light);
+    padding: 3px 12px;
+    border-radius: 999px;
+    margin-bottom: 6px;
+  }
+  .place {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 4px 0 2px;
+  }
+  .hours {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2f8f5b;
+    background: #e6f9ed;
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin: 4px 0;
+  }
+  .hours.closed {
+    color: #d84343;
+    background: #fde8e8;
+  }
+  .note {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .addr {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 4px 0 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .map-link {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .map-link:hover {
+    text-decoration: underline;
+  }
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>高雄一日遊行程</h1>
+    <p>2026/07/04（六）</p>
+  </header>
+
+  <div class="timeline">
+    <div class="item">
+      <span class="time">11:00</span>
+      <p class="place">🍔 丹丹漢堡</p>
+      <span class="hours">🟢 週六 7:00–21:00</span>
+      <p class="note">分店待確認，鄰近路線建議可選林森二路店</p>
+      <p class="addr">林森二路 7-7 號，高雄市苓雅區（近哈瑪星車站）</p>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.6162763,120.3079491&query_place_id=ChIJ9eVM82IDbjQRg0IN10T5eIQ" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+    </div>
+
+    <div class="item">
+      <span class="time">13:00</span>
+      <p class="place">🏘️ 旗山老街 或 美濃客家文化館</p>
+      <p class="note">擇一前往</p>
+      <p class="addr">旗山老街：中山路 1 號，高雄市旗山區</p>
+      <span class="hours">🟢 週六 14:00–20:00</span>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.8846224,120.4819792&query_place_id=ChIJ2SN1qlJqbjQRlpX_OGuzUj4" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+      <p class="addr">美濃客家文化館：民族路 49-3 號，高雄市美濃區</p>
+      <span class="hours">🟢 週六 9:00–17:00</span>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.9110749,120.5575480&query_place_id=ChIJQ4RlwyZCbjQRVuhbdSagF6w" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+    </div>
+
+    <div class="item">
+      <span class="time">14:30</span>
+      <p class="place">🍧 濃、甜</p>
+      <span class="hours">🟢 週六 12:00–18:00</span>
+      <p class="note">甜點下午茶（濃、甜 Original dessert）</p>
+      <p class="addr">民族路 53-7 號，高雄市美濃區</p>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.9034311,120.5533790&query_place_id=ChIJmS6SsBBBbjQRCvza5YxTqbo" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+    </div>
+
+    <div class="item">
+      <span class="time">16:30</span>
+      <p class="place">🚗 海邊路停車場</p>
+      <span class="hours">🟢 24 小時</span>
+      <p class="note">停車</p>
+      <p class="addr">海邊路 15 號，高雄市苓雅區</p>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.6142702,120.2915362&query_place_id=ChIJ-2_zeYEDbjQR6qtNCmENnbw" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+    </div>
+
+    <div class="item">
+      <span class="time">17:00</span>
+      <p class="place">🛍️ FOCUS 13 珠寶廣場</p>
+      <span class="hours">🟢 週六 11:00–21:00</span>
+      <p class="note">如果有時間可以先逛再去吃晚餐</p>
+      <p class="addr">海邊路 110 號，高雄市苓雅區</p>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.6183231,120.2917065&query_place_id=ChIJ-RCtRwAFbjQRFhnhpdaTXRk" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+    </div>
+
+    <div class="item">
+      <span class="time">18:30</span>
+      <p class="place">🍖 打鹿岸原住民人文主題餐廳（高流店）</p>
+      <span class="hours">🟢 週六 11:00–23:00</span>
+      <p class="note">19:00 現場會有音樂</p>
+      <p class="addr">海邊路 15 號之 4，高雄市苓雅區</p>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.6156416,120.2923495&query_place_id=ChIJM2shJgADbjQRcA3KVK7pLUo" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+    </div>
+
+    <div class="item">
+      <span class="time">20:00</span>
+      <p class="place">🛴 higo 大義站・租電動滑板車</p>
+      <span class="hours">🟢 24 小時</span>
+      <p class="note">步行前往，沿港區騎乘</p>
+      <p class="addr">大義街 25 號，高雄市鹽埕區（駁二大義倉庫）</p>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.6195267,120.2850123&query_place_id=ChIJpwLk9L0FbjQRlIAUlaePAC0" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+    </div>
+
+    <div class="item">
+      <span class="time">21:00</span>
+      <p class="place">🌉 大港橋 + 棧貳庫 KW2</p>
+      <p class="addr">大港橋：高雄市鹽埕區</p>
+      <span class="hours">🟢 24 小時</span>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.6178831,120.2838745&query_place_id=ChIJJQ_oku8FbjQRD8vKIG-qlfc" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+      <p class="addr">棧貳庫 KW2：蓬萊路 17 號，高雄市鼓山區</p>
+      <span class="hours">🟢 週六 10:00–22:00</span>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.6186461,120.2777946&query_place_id=ChIJKSS3UIoDbjQRhxfslrQv3LM" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+    </div>
+
+    <div class="item">
+      <span class="time">21:30</span>
+      <p class="place">🚋 輕軌・光榮碼頭站</p>
+      <p class="note">搭輕軌回海邊路停車場</p>
+      <p class="addr">高雄市苓雅區（近海邊路停車場）</p>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=22.6167885,120.2932385&query_place_id=ChIJq-79lYADbjQRoEOshp0MaHM" target="_blank" rel="noopener">在 Google 地圖開啟 →</a>
+    </div>
+  </div>
+
+  <footer>高雄行程 · 旗山 · 美濃 · 亞灣港區</footer>
+</div>
+</body>
+</html>
